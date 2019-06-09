@@ -54,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
         sb.append("\r\n order: " + String.valueOf(item.getOrder()));
         sb.append("\r\n title: " + item.getTitle());
         tv.setText(sb.toString());
-
+        if(item.getItemId() == R.id.menu_exit){
+            finish();
+        }
         return super.onOptionsItemSelected(item);
     }
 
